@@ -15,7 +15,7 @@ import com.gestaocustos.gestpro.models.Posto;
 public class PostoService {
     @Autowired
     public PostoRepo postoRepo;
-    
+
     public Posto getById(int id) {
         Posto posto = postoRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Posto não encontrado!"));
@@ -32,8 +32,8 @@ public class PostoService {
         return postoRepo.findAll();
     }
 
-    public void save(Posto posto) {
-        postoRepo.save(posto);
+    public Posto save(Posto posto) {
+        return postoRepo.save(posto);
     }
 
     public void deleteById(int id) {

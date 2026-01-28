@@ -29,8 +29,8 @@ public class AbastecimentoService {
         return abastecimentoRepo.findAll();
     }
 
-    public void save(Abastecimento abastecimento) {
-        abastecimentoRepo.save(abastecimento);
+    public Abastecimento save(Abastecimento abastecimento) {
+        return abastecimentoRepo.save(abastecimento);
     }
 
     public void deleteById(int id) {
